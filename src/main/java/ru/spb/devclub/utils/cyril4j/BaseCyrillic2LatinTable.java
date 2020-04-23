@@ -4,12 +4,10 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-import static ru.spb.devclub.utils.cyril4j.StringUtil.capitalize;
-
 /**
  * @author Grig Alex
  */
-public abstract class BaseCyrillic2LatinTable implements Table {
+public abstract class BaseCyrillic2LatinTable<T> implements Table {
     protected static Map<Character, String> BASE_DATA;
 
     static {
@@ -34,70 +32,65 @@ public abstract class BaseCyrillic2LatinTable implements Table {
         BASE_DATA = Collections.unmodifiableMap(data);
     }
 
-    protected final Map<Character, String> data;
+    protected final Map<Character, T> data;
 
     public BaseCyrillic2LatinTable() {
         this.data = createData();
     }
 
-    protected Map<Character, String> createData() {
-        final Map<Character, String> data = new HashMap<>(BASE_DATA.size() + 16);
-        data.put('Е', capitalize(getE()));
-        data.put('Ё', capitalize(getYo()));
-        data.put('Ж', capitalize(getZh()));
-        data.put('И', capitalize(getI()));
-        data.put('Й', capitalize(getShortI()));
-        data.put('Х', capitalize(getKh()));
-        data.put('Ц', capitalize(getC()));
-        data.put('Ч', capitalize(getCh()));
-        data.put('Ш', capitalize(getSh()));
-        data.put('Щ', capitalize(getShch()));
-        data.put('Ъ', capitalize(getSoftSign()));
-        data.put('Ы', capitalize(getY()));
-        data.put('Ь', capitalize(getSolidSign()));
-        data.put('Э', capitalize(getEh()));
-        data.put('Ю', capitalize(getYu()));
-        data.put('Я', capitalize(getYa()));
+    protected Map<Character, T> createData() {
+        final Map<Character, T> baseData = createBaseData();
+        final Map<Character, T> data = new HashMap<>(baseData.size() + 16);
+        data.put('Е', getE());
+        data.put('Ё', getYo());
+        data.put('Ж', getZh());
+        data.put('И', getI());
+        data.put('Й', getShortI());
+        data.put('Х', getKh());
+        data.put('Ц', getC());
+        data.put('Ч', getCh());
+        data.put('Ш', getSh());
+        data.put('Щ', getShch());
+        data.put('Ъ', getSolidSign());
+        data.put('Ы', getY());
+        data.put('Ь', getSoftSign());
+        data.put('Э', getEh());
+        data.put('Ю', getYu());
+        data.put('Я', getYa());
         return data;
     }
 
-    protected abstract String getE();
+    protected abstract Map<Character, T> createBaseData();
 
-    protected abstract String getYo();
+    protected abstract T getE();
 
-    protected abstract String getZh();
+    protected abstract T getYo();
 
-    protected abstract String getI();
+    protected abstract T getZh();
 
-    protected abstract String getShortI();
+    protected abstract T getI();
 
-    protected abstract String getKh();
+    protected abstract T getShortI();
 
-    protected abstract String getC();
+    protected abstract T getKh();
 
-    protected abstract String getCh();
+    protected abstract T getC();
 
-    protected abstract String getSh();
+    protected abstract T getCh();
 
-    protected abstract String getShch();
+    protected abstract T getSh();
 
-    protected abstract String getSoftSign();
+    protected abstract T getShch();
 
-    protected abstract String getY();
+    protected abstract T getSolidSign();
 
-    protected abstract String getSolidSign();
+    protected abstract T getY();
 
-    protected abstract String getEh();
+    protected abstract T getSoftSign();
 
-    protected abstract String getYu();
+    protected abstract T getEh();
 
-    protected abstract String getYa();
+    protected abstract T getYu();
 
-    @Override
-    public String get(char symbol) {
-        if (Character.isUpperCase(symbol)) {
-            return data.get(symbol);
-        }
-        return data.get(symbol).toLowerCase();
-    }
+    protected abstract T getYa();
 }
