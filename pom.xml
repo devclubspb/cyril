@@ -5,18 +5,18 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>ru.spb.devclub.utils</groupId>
-  <artifactId>сyril4j</artifactId>
+  <artifactId>cyril4j</artifactId>
   <version>0.1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>сyril4j</name>
+  <name>cyril4j</name>
   <description>This library contains utility classes for working with translation.</description>
-  <url>https://github.com/devclubspb/сyril4j</url>
+  <url>https://github.com/devclubspb/cyril4j</url>
 
   <licenses>
     <license>
       <name>MIT License</name>
-      <url>https://raw.githubusercontent.com/devclubspb/сyril4j/master/LICENSE</url>
+      <url>https://raw.githubusercontent.com/devclubspb/cyril4j/master/LICENSE</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
@@ -196,14 +196,14 @@
   </distributionManagement>
 
   <issueManagement>
-    <url>https://github.com/devclubspb/сyril4j/issues</url>
+    <url>https://github.com/devclubspb/cyril4j/issues</url>
     <system>GitHub Issues</system>
   </issueManagement>
 
   <scm>
-    <connection>scm:git:https://github.com/devclubspb/сyril4j.git</connection>
-    <developerConnection>scm:git:https://github.com/devclubspb/сyril4j.git</developerConnection>
-    <url>https://github.com/devclubspb/сyril4j.git</url>
+    <connection>scm:git:https://github.com/devclubspb/cyril4j.git</connection>
+    <developerConnection>scm:git:https://github.com/devclubspb/cyril4j.git</developerConnection>
+    <url>https://github.com/devclubspb/cyril4j.git</url>
     <tag>HEAD</tag>
   </scm>
 
