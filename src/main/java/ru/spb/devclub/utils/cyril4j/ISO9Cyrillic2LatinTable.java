@@ -1,6 +1,8 @@
 package ru.spb.devclub.utils.cyril4j;
 
 /**
+ * The system B of GOST 7.79-2000 (ISO 9-95).
+ *
  * @author Grig Alex
  */
 public class ISO9Cyrillic2LatinTable extends BaseCyrillic2LatinContextTable {
