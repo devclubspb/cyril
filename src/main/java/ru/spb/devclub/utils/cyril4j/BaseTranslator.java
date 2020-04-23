@@ -3,10 +3,10 @@ package ru.spb.devclub.utils.cyril4j;
 /**
  * @author Grig Alex
  */
-public abstract class BaseTranslator implements Translator {
-    protected final Table table;
+public abstract class BaseTranslator<T extends Table> implements Translator {
+    protected final T table;
 
-    protected BaseTranslator(Table table) {
+    protected BaseTranslator(T table) {
         this.table = table;
     }
 
