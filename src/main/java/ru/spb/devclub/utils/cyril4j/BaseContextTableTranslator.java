@@ -3,8 +3,8 @@ package ru.spb.devclub.utils.cyril4j;
 /**
  * @author Grig Alex
  */
-public class BaseContextTranslator<T extends ContextTable> extends BaseTranslator<T> {
-    protected BaseContextTranslator(T table) {
+public class BaseContextTableTranslator<T extends ContextTable> extends BaseTableTranslator<T> {
+    protected BaseContextTableTranslator(T table) {
         super(table);
     }
 
