@@ -3,7 +3,7 @@ package ru.spb.devclub.utils.cyril4j;
 /**
  * @author Grig Alex
  */
-public abstract class SimpleCyrillic2LatinTable extends BaseCyrillic2LatinTable<String> {
+public abstract class SimpleCyrillic2LatinMap extends BaseCyrillic2LatinMap<String> {
     @Override
     public String get(char symbol) {
         if (Character.isUpperCase(symbol)) {

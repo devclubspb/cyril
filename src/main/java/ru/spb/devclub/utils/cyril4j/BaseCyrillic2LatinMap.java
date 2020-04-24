@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * @author Grig Alex
  */
-public abstract class BaseCyrillic2LatinTable<T> implements Table {
+public abstract class BaseCyrillic2LatinMap<T> implements Table {
     protected static Map<Character, String> BASE_DATA;
 
     static {
@@ -34,7 +34,7 @@ public abstract class BaseCyrillic2LatinTable<T> implements Table {
 
     protected final Map<Character, T> data;
 
-    public BaseCyrillic2LatinTable() {
+    public BaseCyrillic2LatinMap() {
         this.data = createData();
     }
 

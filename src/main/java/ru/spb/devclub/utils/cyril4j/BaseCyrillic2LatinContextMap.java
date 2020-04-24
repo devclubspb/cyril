@@ -3,13 +3,13 @@ package ru.spb.devclub.utils.cyril4j;
 import java.util.HashMap;
 import java.util.Map;
 
-import static ru.spb.devclub.utils.cyril4j.BaseCyrillic2LatinContextTable.Context;
+import static ru.spb.devclub.utils.cyril4j.BaseCyrillic2LatinContextMap.Context;
 
 /**
  * @author Grig Alex
  */
-public abstract class BaseCyrillic2LatinContextTable
-        extends BaseCyrillic2LatinTable<Context> implements ContextTable {
+public abstract class BaseCyrillic2LatinContextMap
+        extends BaseCyrillic2LatinMap<Context> implements ContextTable {
     @Override
     protected Map<Character, Context> createBaseData() {
         HashMap<Character, Context> data = new HashMap<>(BASE_DATA.size());

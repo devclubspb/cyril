@@ -5,7 +5,7 @@ package ru.spb.devclub.utils.cyril4j;
  *
  * @author Grig Alex
  */
-public class ISO9Cyrillic2LatinTable extends BaseCyrillic2LatinContextTable {
+public class ISO9Cyrillic2LatinMap extends BaseCyrillic2LatinContextMap {
     @Override
     protected Context getE() {
         return SimpleContext.of("E");
